@@ -1,0 +1,53 @@
+#container{
+    color: brown;
+    border: 1px solid brown;
+    margin: 5%;
+    height: 100%;
+}
+p{
+    text-align: center;
+}
+img{
+    height: 100%;
+    vertical-align: middle;
+    float: left;
+}
+#header{
+    color: green;
+    clear: both;
+    border: 1px solid green;
+    height: calc(15% - 40px);
+    margin: 20px;
+}
+#body
+{
+    border: 1px solid violet;
+    width: calc(100% - 40px);
+    height: calc(70% - 40px);
+    margin: 20px;
+}
+#footer
+{
+    color: maroon;
+    clear: both;
+    border: 1px solid maroon;
+    width: calc(100% - 40px);
+    height: calc(20% - 40px);
+    margin: 20px;
+}
+.leftsidediv
+{
+    color: aqua;
+    width: 49%;
+    height: 100%;
+    border: 1px solid aqua;
+    float: left;
+}
+.rightsidediv
+{
+    color: blueviolet;
+    width: 49%;
+    height: 100%;
+    border: 1px solid blueviolet;
+    float: right;
+}

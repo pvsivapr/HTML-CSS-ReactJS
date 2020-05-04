@@ -1,0 +1,24 @@
+.firstdiv
+{
+    
+}
+
+nav li
+{
+    width: 100px;
+}
+nav li:first-child
+{
+    margin-left: 0;
+}
+
+footer
+{
+    clear: both;
+}
+section .firstdiv{
+    color: orange;
+}
+section{
+
+}

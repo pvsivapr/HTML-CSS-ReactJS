@@ -1,0 +1,47 @@
+.genericblock{
+    color: violet;
+}
+
+#container{
+    color: brown;
+    border: 1px solid green;
+    margin: 5%;
+    /* overflow: auto; */
+}
+
+#container:before, #container:after
+{
+    content: "";
+    display: table;
+    border: 1px solid green;
+    border-radius: 2px;
+}
+#container:after
+{
+    clear: both;
+}
+.secondblock{
+    color: orange
+}
+.secondblock::before
+{
+    color: maroon;
+    content: "I am second block added via css using pseudo before";
+}
+.secondblock::after
+{
+    color: blue;
+    content: "I am second block added via css using pseudo after";
+}
+.thirdblock{
+    color: orange
+}
+.genericblock{
+    color: yellow
+}
+.floatdemo{
+    float: left;
+    width: 35%;
+    border: 1px solid green;
+    margin: 2%;
+}

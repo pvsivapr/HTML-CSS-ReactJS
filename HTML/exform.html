@@ -1,0 +1,40 @@
+<html>
+    <head>
+        <title>this is a from example</title>
+        <style>
+            input{
+                display: block;
+                margin: 20px;
+            }
+            input:invalid{
+                outline: 5px dashed maroon;
+            }
+        </style>
+    </head>
+    <body>
+        <form action="www.google.com/formSubmit" method="POST" >
+            <input type="text"/>
+            <input type="number"/>
+            <input type="number" value="6" step="2"/>
+            <input type="range" min="1" max="10" value="5"/>
+            <input type="range" min="8" max="20" value="5"/>
+            <input type="date" name="exdate"/>
+            <input type="text" required name="myrequiredfiles"/>
+            <input type="email" name="exmail"/>
+            <input type="file" name="exfile"/>
+
+            <input type="radio" name="exradio" id="r1"/>
+            <input type="radio" name="exradio" id="r1"/>
+            <input type="radio" name="exradio" id="r1"/>
+
+            <input type="checkbox" name="excheck" id="c1"/>
+            <input type="checkbox" name="excheck" id="c1"/>
+            <input type="checkbox" name="excheck" id="c1"/>
+
+            <input type="button" value="Form Submit"/><!--required field/html5 validatin not works with input type as button but works with type submit-->
+            <input type="submit" value="Form Submit"/>
+            <!--name is to be given for input tag to send the data in the form with key an value-->
+        </form>
+        <audio src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" controls muted pl></audio>
+    </body>
+</html>
