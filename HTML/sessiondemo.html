@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <style type="javascript" src="../sessiondemo.js"></style>
+    </head>
+    <body>
+        <p>
+            <button id="set" >Set Item</button>
+            <button id="get" >Get Item</button>
+        </p>
+        <div id="output"></div>
+
+        <script>
+            var storage = {
+                set: function(item, value)
+                {
+                    sessionStorage.setItem(item, value);
+                },
+                get: function(item)
+                {
+                    var value = sessionStorage.getItem(item);
+                    return value;
+                },
+            };
+            var set = document.getElementById('set');
+            var get = document.getElementById('get');
+            var output = document.getElementById('output');
+            set.onclick = function(){
+                storage.set('test', 'value');
+            }
+            get.onclick = function()
+            {
+                var value = storage.get('test');
+                output.innerHTML = value;
+            }
+        </script>
+    </body>
+    <!-- <script type="javascript">
+        var storage = {
+            set: function(item, value)
+            {
+                sessionStorage.setItem(item, value);
+            },
+            get: function(item)
+            {
+                var value = sessionStorage.getItem(item);
+                return value;
+            },
+        };
+        var set = document.getElementById('set');
+        var get = document.getElementById('get');
+        var output = document.getElementById('output');
+        set.onClick() = function(){
+            storage.set('test', 'value');
+        };
+        get.onClick() = function()
+        {
+            var value = storage.get('test');
+            output.innerHTML = value;
+        };
+    </script> -->
+</html>

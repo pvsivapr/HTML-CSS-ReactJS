@@ -38,16 +38,31 @@ img{
 .leftsidediv
 {
     color: aqua;
-    width: 49%;
-    height: 100%;
+    width: calc(65% - 32px);
+    height: calc(100% - 40px);
     border: 1px solid aqua;
     float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
 }
 .rightsidediv
 {
     color: blueviolet;
-    width: 49%;
-    height: 100%;
+    width: calc(35% - 32px);
+    height: calc(100% - 40px);
     border: 1px solid blueviolet;
     float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.leftsidedicchilddiv
+{
+    color: olive;
+    width: 94%;
+    margin: 20px;
+    border: 1px solid olive;
 }
