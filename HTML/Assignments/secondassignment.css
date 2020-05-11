@@ -1,0 +1,80 @@
+#container{
+    color: brown;
+    border: 1px solid brown;
+    margin: 5%;
+    height: 100%;
+}
+p{
+    text-align: center;
+}
+img{
+    height: 100%;
+    vertical-align: middle;
+    float: left;
+}
+input,.storageButton{
+    float: left;
+    clear: both;
+    width: calc(100% - 40px);
+    margin: 20px;
+}
+#header{
+    color: green;
+    clear: both;
+    border: 1px solid green;
+    height: calc(15% - 10px);
+    margin: 5px;
+}
+#body
+{
+    border: 1px solid violet;
+    width: calc(100% - 40px);
+    height: calc(70% - 40px);
+    margin: 20px;
+}
+#footer
+{
+    color: maroon;
+    clear: both;
+    border: 1px solid maroon;
+    width: calc(100% - 40px);
+    height: calc(20% - 40px);
+    margin: 20px;
+}
+.leftsidediv
+{
+    color: aqua;
+    width: calc(65% - 32px);
+    height: calc(100% - 40px);
+    border: 1px solid aqua;
+    float: left;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    margin-right: 10px;
+}
+.rightsidediv
+{
+    color: blueviolet;
+    width: calc(35% - 32px);
+    height: calc(100% - 40px);
+    border: 1px solid blueviolet;
+    float: right;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 20px;
+}
+.leftsidedivchilddiv
+{
+    color: olive;
+    width: 94%;
+    margin: 20px;
+    border: 1px solid olive;
+    overflow-y: auto;
+}
+.registrationSubmitButton:hover,.storageButton:hover
+{
+    color: green;
+    background-color: yellow;
+}

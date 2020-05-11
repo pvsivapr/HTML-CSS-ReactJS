@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta charset="en">
+        <title>First Assignment</title>
+        <link rel="stylesheet" href="secondassignment.css">
+    </head>
+    <body id="container">
+        <div id="header">
+            <img src="./../LocalFiles/CognizantIcon.png"/>
+            <p>This is my second assignment</p>
+        </div>
+        <div id="body">
+            <div class="leftsidediv">
+                <p>This is a Registration part</p>
+                <div class="leftsidedivchilddiv">
+                    <form id="registrationForm">
+                        <input type="text" placeholder="Enter First Name" name="fName" required/>
+                        <input type="text" placeholder="Enter Last Name" name="lName"/>
+                        <input type="number" minlength="10" maxlength="10" min="6000000000" max="9999999999" required placeholder="Enter Mobile Number" name="mNum"/>
+                        <input type="email" placeholder="Enter email ID" name="eMail"/>
+                        <!-- <input type="submit" class="registrationSubmitButton" name="submit"/> -->
+                    </form>
+                    <button class="storageButton" onclick="onSessionClicked(true); return false;">Submit to Session</button>
+                    <button class="storageButton" onclick="onLocalStorageClicked(true); return false;">Submit to Local Storage</button>
+                </div>
+            </div>
+            <div class="rightsidediv">
+                <div class="rightsidedivDisplayDataDiv" id="displayDataDiv"></div>
+                <div class="rightsidedivButtonHolderDiv" id="buttonHolderDiv">
+                    <button class="storageButton" onclick="onSessionClicked(false); return false;">Get From Session</button>
+                    <button class="storageButton" onclick="onLocalStorageClicked(false); return false;">Get From Local Storage</button>
+                    <button class="storageButton" onclick="onClearSessionClicked(); return false;">Clear Session Data</button>
+                    <button class="storageButton" onclick="onClearLocalStorageClicked(); return false;">Clear Local Storage Data</button>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <p>Contact me</p>
+            <p>Email: venkatasivaprasad.reddypulagam@cognizant.com; Phone: 9494953236</p>
+        </div>
+        <script src="secondassignment.js"></script>
+    </body>
+</html>
