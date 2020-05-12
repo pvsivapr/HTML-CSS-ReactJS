@@ -14,15 +14,35 @@
             <div class="leftsidediv">
                 <p>This is a Registration part</p>
                 <div class="leftsidedivchilddiv">
-                    <form id="registrationForm">
-                        <input type="text" placeholder="Enter First Name" name="fName" required/>
-                        <input type="text" placeholder="Enter Last Name" name="lName"/>
-                        <input type="number" minlength="10" maxlength="10" min="6000000000" max="9999999999" required placeholder="Enter Mobile Number" name="mNum"/>
-                        <input type="email" placeholder="Enter email ID" name="eMail"/>
-                        <!-- <input type="submit" class="registrationSubmitButton" name="submit"/> -->
+                    <form id="registrationForm" onsubmit="SelectStorage(); return false;">
+                        <input type="text" placeholder="Enter Name" name="uName" minlength="5" maxlength="20" required/>
+                        <input type="password" placeholder="Enter Password" name="uPwd" minlength="5" maxlength="20" required/>
+                        <input type="text" placeholder="Enter email ID" name="eMail"/>
+                        <input type="text" value="Cognizant" name="uCompany" readonly/>
+
+                        <p style="text-align: left; margin-bottom: 0px;">Select Gender</p>
+                        <input class="radioCheckBox" type="radio" name="rGend" id="rGender" value="male" required/>male<br>
+                        <input class="radioCheckBox" type="radio" name="rGend" id="rGender" value="female"/>female<br>
+                        <input class="radioCheckBox" type="radio" name="rGend" id="rGender" value="others"/>others<br>
+                        
+                        <br>
+                        <input class="radioCheckBox" type="checkbox" name="tAndD" id="cTAndD" required/>I accept the terms and conditions
+
+                        <p style="text-align: left; margin-bottom: 0px;">Select Storage Type</p>
+                        <input class="radioCheckBox" type="radio" name="rStore" id="rStorage" value="session" checked="checked"/>Save in Session Storage<br>
+                        <input class="radioCheckBox" type="radio" name="rStore" id="rStorage" value="local"/>Save in Local Storage<br>
+                        <br>
+                        <!-- <p>I accept the terms and conditions</p> -->
+
+                        <!-- <input type="number" minlength="10" maxlength="10" min="6000000000" max="9999999999" required placeholder="Enter Mobile Number" name="mNum"/> -->
+                        <!-- <input type="submit" onsubmit="return false; onSessionClicked(true);" class="registrationSubmitButton" value="Submit to Session"/>
+                        <input type="submit" onsubmit="onLocalStorageClicked(true); return false;" class="registrationSubmitButton" value="Submit to Local Storage"/> -->
+                        <!-- <input type="submit" onsubmit="onSessionClicked(true);" class="registrationSubmitButton" value="Submit to Session"/>
+                        <input type="submit" onsubmit="onLocalStorageClicked(true);" class="registrationSubmitButton" value="Submit to Local Storage"/> -->
+                        <input type="submit" value="Submit to Session"/>
                     </form>
-                    <button class="storageButton" onclick="onSessionClicked(true); return false;">Submit to Session</button>
-                    <button class="storageButton" onclick="onLocalStorageClicked(true); return false;">Submit to Local Storage</button>
+                    <!-- <button class="storageButton" onclick="onSessionClicked(true); return false;">Submit to Session</button>
+                    <button class="storageButton" onclick="onLocalStorageClicked(true); return false;">Submit to Local Storage</button> -->
                 </div>
             </div>
             <div class="rightsidediv">

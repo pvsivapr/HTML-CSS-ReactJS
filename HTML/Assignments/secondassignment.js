@@ -11,10 +11,6 @@ var sessionDataStore = {
     clearData : function()
     {
         sessionStorage.clear();
-    },
-    setDefaults : function()
-    {
-        sessionStorage.act
     }
 }
 
@@ -34,14 +30,29 @@ var localDataStore = {
     }
 }
 
-var fName,lName, mNum, eMail = "";
+var uName,uPwd, mNum, eMail, rGender, cTAndD = "";
 var newLine = "<br />";
 function collectData()
 {
-    fName = document.forms["registrationForm"]["fName"].value;
-    lName = document.forms["registrationForm"]["lName"].value;
-    mNum = document.forms["registrationForm"]["mNum"].value;
+    uName = document.forms["registrationForm"]["uName"].value;
+    uPwd = document.forms["registrationForm"]["uPwd"].value;
     eMail = document.forms["registrationForm"]["eMail"].value;
+    uCompany = document.forms["registrationForm"]["uCompany"].value;
+    rGender = document.forms["registrationForm"]["rGender"].value;
+    cTAndD = document.forms["registrationForm"]["cTAndD"].value;
+}
+
+function SelectStorage()
+{
+    var storageType = document.forms["registrationForm"]["rStore"].value;
+    if(storageType === "local")
+    {
+        onLocalStorageClicked(true);
+    }
+    else
+    {
+        onSessionClicked(true);
+    }
 }
 
 function onSessionClicked(shallSaveData)
@@ -49,22 +60,30 @@ function onSessionClicked(shallSaveData)
     if(shallSaveData)
     {
         collectData();
-        sessionDataStore.set("fName", fName);
-        sessionDataStore.set("lName", lName);
-        sessionDataStore.set("mNum", mNum);
+        sessionDataStore.set("uName", uName);
+        sessionDataStore.set("uPwd", uPwd);
         sessionDataStore.set("eMail", eMail);
+        sessionDataStore.set("uCompany", uCompany);
+        sessionDataStore.set("rGender", rGender);
+        sessionDataStore.set("cTAndD", cTAndD);
     }
     else
     {
         var output = "";
         if(sessionStorage)
         {
-            var sfName = sessionDataStore.get("fName");
-            var slName = sessionDataStore.get("lName");
-            var smNum = sessionDataStore.get("mNum");
+            var suName = sessionDataStore.get("uName");
+            var suPwd = sessionDataStore.get("uPwd");
             var seMail = sessionDataStore.get("eMail");
+            var suCompany = sessionDataStore.get("uCompany");
+            var srGender = sessionDataStore.get("rGender");
+            var scTAndD = sessionDataStore.get("cTAndD");
         
-            output = "<u><b>The Session Data stored is: </b></u>" + newLine + "First Name =" + sfName + newLine + "Last Name =" + slName + newLine + "Mobile Number =" + smNum + newLine + "email ID =" + seMail;
+            output = "<u><b>The Session Data stored is: </b></u>" + newLine + 
+            "User Name = " + suName + newLine +
+            "email ID = " + seMail + newLine +
+            "Company = " + suCompany + newLine +
+            "Gender = " + srGender + newLine ;
         }
         else
         {
@@ -80,22 +99,30 @@ function onLocalStorageClicked(shallSaveData)
     if(shallSaveData)
     {
         collectData();
-        localDataStore.set("fName", fName);
-        localDataStore.set("lName", lName);
-        localDataStore.set("mNum", mNum);
+        localDataStore.set("uName", uName);
+        localDataStore.set("uPwd", uPwd);
         localDataStore.set("eMail", eMail);
+        localDataStore.set("uCompany", uCompany);
+        localDataStore.set("rGender", rGender);
+        localDataStore.set("cTAndD", cTAndD);
     }
     else
     {
         var output = "";
         if(localStorage)
         {
-            var sfName = localDataStore.get("fName");
-            var slName = localDataStore.get("lName");
-            var smNum = localDataStore.get("mNum");
+            var suName = localDataStore.get("uName");
+            var suPwd = localDataStore.get("uPwd");
             var seMail = localDataStore.get("eMail");
+            var suCompany = localDataStore.get("uCompany");
+            var srGender = localDataStore.get("rGender");
+            var scTAndD = localDataStore.get("cTAndD");
         
-            output = "<u><b>The Local Data stored is: </b></u>" + newLine + "First Name =" + sfName + newLine + "Last Name =" + slName + newLine + "Mobile Number =" + smNum + newLine + "email ID =" + seMail;
+            output = "<u><b>The Local Data stored is: </b></u>" + newLine +  
+            "User Name = " + suName + newLine +
+            "email ID = " + seMail + newLine +
+            "Company = " + suCompany + newLine +
+            "Gender = " + srGender + newLine ;
         }
         else
         {
