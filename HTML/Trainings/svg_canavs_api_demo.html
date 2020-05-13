@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <meta charset="UTF-8"/>
+        <meta charset="en">
+        <title>First Assignment</title>
+        <link rel="stylesheet" href="./svg_canavs_api_demo.css">
+    </head>
+    <body id="container">
+        <div id="header">
+            <p>This is svg, canavas, Relative Measurements, JS introduction(DOM -> Document Object Methods - 'document') - please scroll below</p>
+        </div>
+        <div id="body">
+            <div id="relativeMeasurement">
+                <p>'%','em','rem' s are relative units while 'px' s are standard units, 'px' won't change size with change in size of parent</p>
+                <p>use 'em' for font related things</p>
+                <p>use '%' for margin, container widths,.. related things</p>
+                <p>'%','em' s works with respect to immediate parent while 'rem's work wrt the HTML root elements</p>
+            </div>
+            
+            <div id="canavsBlock">
+                <canvas id="firstCanvas" height="100" width="200" style="border: 1px solid #d3d3d3;">
+                    Sorry your browser does not support HTML canvas Tag
+                </canvas>
+                <script>
+                    var firstCanvas = document.getElementById("firstCanvas");
+                    var firstCanvasContext = firstCanvas.getContext("2d");
+                    //create Gradient
+                    var gradientObj = firstCanvasContext.createLinearGradient(0,0,200,0);
+                    //gradientObj.addColorStop(0, "Maroon");
+                    //gradientObj.addColorStop(1, "Green");
+                    gradientObj.addColorStop(0.0, "violet");
+                    gradientObj.addColorStop(0.142, "indigo");
+                    gradientObj.addColorStop(0.284, "blue");
+                    gradientObj.addColorStop(0.426, "Green");
+                    gradientObj.addColorStop(0.568, "yellow");
+                    gradientObj.addColorStop(0.710, "orange");
+                    gradientObj.addColorStop(0.852, "Maroon");
+                    //add this gradient to context
+                    firstCanvasContext.fillStyle = gradientObj;
+                    firstCanvasContext.fillRect(10,10,150,80);
+                </script>
+            </div>
+
+            <div id="svgBlock">
+                <svg height="100" width="100">
+                    <circle cx="50" cy="50" r="40" stroke="black" stroke-width="5px" fill="red"/>
+                    Sorry your browser does not support inline svg
+                </svg>
+
+                <svg height="30" width="200">
+                    <text x="0" y="15" fill="red">SVG Demo</text>
+                    Sorry your browser does not support inline svg
+                </svg>
+                <img src="./Freesample.svg"/>
+            </div>
+
+        </div>
+        <div id="footer">
+            <p>Contact me</p>
+            <p>Email: venkatasivaprasad.reddypulagam@cognizant.com; Phone: 9494953236</p>
+        </div>
+        <script src="./svg_canavs_api_demo.js"></script>
+    </body>
+</html>
