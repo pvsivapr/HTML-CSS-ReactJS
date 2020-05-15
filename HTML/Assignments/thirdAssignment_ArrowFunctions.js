@@ -1,13 +1,15 @@
-var GetEmployeeData = (name, city) => {
+var getEmployeeData = (name, city) => {
     let response = "";
     const companyName = "Cognizant";
-    response = "My name is " + name + ".\nI am From " + city + ".\nI work with ${companyName}" + companyName;
+    response = "My name is " + name + ".\nI am From " + city + ".\nI work with " + companyName;
     return response;
 };
 
-function onPageStart(){
+function onPageStart()
+{
+    console.log("  ");
     console.log("Task 1 : ");
-    console.log(GetEmployeeData("Sivaprasad", "Rayavaram"));
+    console.log(getEmployeeData("Sivaprasad", "Rayavaram"));
 }
 
-onPageStart();//thirdAssignment_ArrowFunctions
+onPageStart();
