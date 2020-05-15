@@ -9,6 +9,7 @@ function arrayFunctions()
     citiesCopy[citiesCopy.length] = "Sanfranscisco";
     citiesCopy.push("Switzerland");
     let array = new PrintArrays(cities, citiesCopy);
+    array.printArrays();
 }
 
 function loopPrintEachArrayElement(array)
