@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="module" src="./importDemoFunction.js"></script>
+    </head>
+    <boby>
+        <u><b>
+            <h1>Please open console for results</h1>
+            <h2>Export Import Tutorial :</h2>
+        </b></u>
+        <p>Helps to include functions, classes, variables from other ".js" files to current ".js" files</p>
+        <p>
+
+           <b>Best way is Using HTML script - module:</b>
+           <ul>
+               <li>In html "script" tag add "type" as "module" instead of "application/javascrip" or else it throws an error saying "Cannot use import statement outside a module."</li>
+               <li>Also to use the "module" type you need a server, cannot be able to run directly on the browser without running a server</li>
+            </ul>
+            
+            <b>Alternate way is by Using Java Script:</b>
+            <ul>
+                <li>Here we don't use "export" or "import" keywords instead we get the entire ".js" file code and include it into the current "HTML" file as "script" by using the following lines
+                    <ol>
+                        <li>var someObject = document.createElement('script');</li>
+                        <li>someObject.src = './xxxxxx/xxxxxxxxxx/xxxxxx.js';</li>
+                        <li>document.head.appendChild(someObject);</li>
+                    </ol>
+                </li>
+                <li>Then in the current ".js" file you can directly use the classes by creating objects, and also can use the functions and variables</li>
+                <li>The possible issue is with the name duplicates, this should be handled with care</li>
+            </ul>
+            
+            <b>Alternate way is by Using HTML Script tag:</b>
+            <ul>
+                <li>Here we don't use "export" or "import" keywords instead we get the entire ".js" file code and include it into the current "HTML" file by using "script" tag by following procedure
+                    <ol>
+                        <li>create a script tag for the ".js" file you want to include before our main ".js" file</li>
+                    </ol>
+                </li>
+                <li>Then in the current ".js" file you can directly use the classes by creating objects, and also can use the functions and variables</li>
+                <li>The possible issue is with the name duplicates, this should be handled with care</li>
+                <li>The both alternate methods have the same things in diferent ways</li>
+            </ul>
+
+        </p>
+    </boby>
+</html>
