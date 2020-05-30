@@ -25,6 +25,9 @@ LocalImages/
 # Ignore file names 'IsIgnoreWorking.js'
 IsIgnoreWorking.js
 
+# Ignore folder named 'node_modules'
+node_modules/
+
 #add 'node_modules' to .gitignore file
 
 git rm -r --cached node_modules

@@ -1,0 +1,1 @@
+//https://www.codingame.com/playgrounds/9799/learn-solve-call-apply-and-bind-methods-in-javascript
