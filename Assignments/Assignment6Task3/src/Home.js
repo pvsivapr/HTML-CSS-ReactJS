@@ -1,5 +1,4 @@
 import React from "react";
-import { txtReader } from "./CustomComponents/GetTxtContent";
 import { Link } from "react-router-dom";
 
 export default class Home extends React.Component {

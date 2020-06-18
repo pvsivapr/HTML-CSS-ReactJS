@@ -1,10 +1,9 @@
 import React from "react"
 import { connect } from "react-redux"
 
-import {increment, decrement, reset} from "./../ReduxComoponents/actions/CounterActions.js"
+import {increment, decrement, reset} from "../actions/CounterActions.js"
 
 class Counter extends React.Component {
-    //state = { count: 0 }
 
     counterIncrement = () => {
         this.props.increment();
@@ -30,11 +29,10 @@ class Counter extends React.Component {
         return uiComponent;
     }
 }
-// export default Counter;
 function mapStateToProps(state)
 {
     return{
-        count: state.count
+        count: state.Counting.count
     };
 }
 const mapDispatchToProps = {
