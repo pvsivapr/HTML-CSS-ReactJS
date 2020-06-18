@@ -1,0 +1,24 @@
+Task 1
+configure redux store in your application
+create an action and reducer
+integrate https://reqres.in/api/users?page=2 API in action and reducer
+Create a Component and a Higher Order Component for the component
+Use mapDispatchtoProps and mapStatetoProps in the HOC to integrate the action and reducer
+Display the data received from the API in the component.
+
+Task 2
+Create another component
+Use useDispatch and useSelector hooks to map the action and reducer to the component
+Display the data in the component.
+
+Task 3
+Create a new project with using Redux tool kit
+Repeat the task1 using the below features
+configureStore
+getDefaultMiddleware
+createReducer
+createAction
+Display the data received from the API in the component.
+
+Task 4
+Repeat the task1 in the trail mail using createSlice() method.

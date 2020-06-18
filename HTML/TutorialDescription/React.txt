@@ -1,0 +1,14 @@
+Install node from npmjs.com
+
+create react app in terminal
+
+
+Using npx:
+https://create-react-app.dev/docs/getting-started/
+npx create-react-app <app name>
+
+
+
+
+
+

@@ -1,0 +1,67 @@
+Task 1:
+Kindly find the assignment below, 
+use component life cycle hooks in each component like ComponentDidMount, getDerivedStateFromProps, componentUnMount, useEffect, useState
+
+In componentDidMount() call a method which will check if a particular key is existing in local storage or not. if the key is existing then console key is existing else console key is not available.
+in render create a button.on click of the button trigger a axios get call to the API http://dummy.restapiexample.com/api/v1/employees
+
+Task 2:
+Create a functional component with useState and useEffect life cycle hook which will receive the employee details as props and display them in a table.
+display a table with the following details from the props received - id, employee name, employee salary, employee age.
+Two buttons should be displayed after each row in the table to update and get the details of each employee respectively.
+
+Task 3:
+clicking on the update button should update each the particular employee record and trigger an axios API call to the API
+http://dummy.restapiexample.com/api/v1/update/{id}
+Sample Requset:{"name":"test1","salary":"1123","age":"23"}
+
+Task 4:
+clicking on the get details button should fetch the particular employee details by triggering an axios get call to
+http://dummy.restapiexample.com/api/v1/employee/{id}
+and send the details as props to Employee Details component and display the employee details in a table - use getDerivedStateFromProps life cycle hook to receie the props and update the state.
+
+
+
+
+constructor(props) {
+    super(props);
+    this.state = {
+      assignedKey: "",
+      keyValue: ""
+    };
+  }
+
+  componentDidMount() {
+    console.log("Component Did Mount");
+    var assignedKey = sessionDataStore.get("assignedKey");
+    if (assignedKey !== undefined && assignedKey !== "") {
+      this.setState({ assignedKey: assignedKey });
+    } else {
+      this.setState({ assignedKey: "" });
+    }
+  }
+
+  OnSetKey = () => {
+    // var value = document.getElementById("keyEntry").value;
+    sessionDataStore.set("assignedKey", this.state.keyValue);
+  };
+
+  OnKeyChange(value) {
+    this.setState({ keyValue: value });
+  }
+
+  render() {
+    const uiComponent = (
+      <div>
+        <p>{this.state.assignedKey}</p>
+        <input
+          id="keyEntry"
+          type="Text"
+          placeholder="Enter Key"
+          onChange={e => this.OnKeyChange(e.target.value)}
+        />
+        <button onClick={this.OnSetKey()}>Set</button>
+      </div>
+    );
+    return uiComponent;
+  }

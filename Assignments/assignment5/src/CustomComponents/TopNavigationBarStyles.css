@@ -1,0 +1,39 @@
+.buttonDivStyle {
+  height: 40px;
+  width: 100%;
+  /* height: 100px; */
+  /* clear: both; */
+  background-color: Green;
+  /* align-items: "left", */
+  /* border: 2px solid purple; */
+  display: flex;
+}
+.buttonDivStyle:first-child {
+  margin-left: 0px;
+}
+.buttonDivStyle:last-child {
+  margin-right: 0px;
+}
+
+.buttonStyle {
+  height: 100%;
+  /* color: transparent; */
+  /* align-self: center; */
+  /* clear: both; */
+  background-color: transparent;
+  border: 0px;
+  cursor: pointer;
+  /* padding-left: 10px; */
+  margin-left: 5px;
+  margin-right: 5px;
+  outline: none;
+}
+.buttonStyle:hover {
+  border: 0px;
+  opacity: 0.6;
+}
+.button:active {
+  border: 0px;
+  background-color: blue;
+  /* outline: none */
+}
